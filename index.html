@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prouduct Preview</title>
+    <style>
+        #main-image{
+            height: 400px;
+            width: 400px;
+            border: 1px solid rgb(148, 138, 138);
+            box-shadow: 5px 10px 8px rgb(135, 130, 130);
+            border-radius: 5px;
+            margin: 20px auto;
+            display: block;
+            object-fit: cover;
+        }
+        .productImage{
+            height: 50px;
+            object-fit: cover;
+            border: 1px solid rgb(148, 140, 140);
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .products{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <img src="./img/1.jpg" id="main-image">
+    <div class="products">
+        <img src="./img/1.jpg" class="productImage" onclick="changeImage('./img/1.jpg')">
+        <img src="./img/2.jpg" class="productImage" onclick="changeImage('./img/2.jpg')">
+        <img src="./img/3.jpg" class="productImage" onclick="changeImage('./img/3.jpg')">
+        <img src="./img/4.jpg" class="productImage" onclick="changeImage('./img/4.jpg')">
+        <img src="./img/5.jpg" class="productImage" onclick="changeImage('./img/5.jpg')">
+    </div>
+    <script>
+        function changeImage(imageName){
+            const resImg  = document.getElementById('main-image');
+            resImg.src = imageName;
+        }
+    </script>
+</body>
+</html>
